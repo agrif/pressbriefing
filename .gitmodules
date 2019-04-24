@@ -1,0 +1,3 @@
+[submodule "flipclock"]
+	path = flipclock
+	url = https://github.com/objectivehtml/FlipClock.git

@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    color: #666;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+}
+
+h1 {
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    max-width: 800px;
+    font-size: 60pt;
+    text-align: center;
+}
+
+.clock {
+    width: 620px;
+    margin: 0 auto;
+}
+
+.source {
+    margin: 0 auto;
+    margin-top: 1em;
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #333;
+    text-decoration: underline;
+}
+
+.footer {
+    font-size: small;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 50;
+    padding: 0.5em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
