@@ -1,6 +1,7 @@
 import urllib.request
 import xml.etree.ElementTree as ET
 import json
+import contextlib
 import shutil
 import datetime
 import os.path
@@ -48,10 +49,14 @@ def move(src):
         print(src, '->', truedest)
         shutil.copy2(src, destroot)
 
+@contextlib.contextmanager
 def generate(name):
     truedest = os.path.join(destroot, name)
     print('generating', truedest)
-    return open(truedest, 'w')
+    try:
+        yield open(truedest + '.tmp', 'w')
+    finally:
+        shutil.move(truedest + '.tmp', truedest)
 
 def main():
     # make sure we are working where we think we are
