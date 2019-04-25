@@ -76,7 +76,7 @@ def main():
     if fetch:
         info['date'] = info['date'].strftime(datefmt)
         with generate('start.js') as f:
-            f.write('var info = {};\n'.format(json.dumps(info)))
+            f.write('var startInfo = {};\n'.format(json.dumps(info)))
         with generate('update.json') as f:
             f.write('{}\n'.format(json.dumps(info)))
 

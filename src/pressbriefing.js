@@ -1,4 +1,12 @@
-function updateClock() {
+var updatePeriod = 1000 * 60 * 5;
+
+function updateInfo() {
+    $.getJSON("update.json", function(data) {
+        updateClock(data);
+    })
+}
+
+function updateClock(info) {
     var now = new Date();
     var then = Date.parse(info.date);
     var diff = (now.getTime() - then) / 1000;
@@ -12,5 +20,6 @@ function updateClock() {
 }
 
 $(document).ready(function() {
-    updateClock();
+    updateClock(startInfo);
+    window.setInterval(updateInfo, updatePeriod)
 });
