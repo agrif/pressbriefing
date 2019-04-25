@@ -15,7 +15,7 @@ function updateClock(info) {
         showSeconds: false,
     });
     $('.latest').html(
-        '<a href="' + info['url'] + '">' + info['title'] + '</a>'
+        'Watch: <a href="' + info['url'] + '">' + info['title'] + '</a>'
     );
 }
 
