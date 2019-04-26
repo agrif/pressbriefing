@@ -72,6 +72,8 @@ def main():
         print('last conference was', local.strftime("%a %b %d, %H:%M %Z"))
 
     move("src/index.html")
+    move("src/icon.png")
+    move("src/preview.png")
     move("src/pressbriefing.js")
     move("src/pressbriefing.css")
     move("extern/jquery-3.4.0.min.js")
