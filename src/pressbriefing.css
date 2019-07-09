@@ -18,7 +18,8 @@ h1 {
 }
 
 .clock {
-    width: 460px;
+    //width: 460px;
+    width: 530px;
     margin: 20px auto;
     padding: 2em;
     background-color: #eee;
