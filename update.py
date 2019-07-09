@@ -12,6 +12,10 @@ url = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLRJNAhZxtqH_3Nl-7n1
 datefmt = '%Y-%m-%dT%H:%M:%S+00:00'
 destroot = "wwwroot"
 
+CHEATING = set([
+    "Treasury Secretary Mnuchin Briefs Reporters",
+])
+
 ns = {
     'atom': 'http://www.w3.org/2005/Atom',
     'media': 'http://search.yahoo.com/mrss/',
@@ -32,6 +36,8 @@ def get_latest():
             'title': entry.find('atom:title', ns).text,
             'url': entry.find('atom:link', ns).attrib['href'],
         }
+        if info['title'] in CHEATING:
+            continue
         infos.append(info)
 
     infos.sort(key=lambda d: d['date'], reverse=True)
