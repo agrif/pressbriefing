@@ -14,6 +14,7 @@ destroot = "wwwroot"
 
 CHEATING = set([
     "Treasury Secretary Mnuchin Briefs Reporters",
+    "Press Briefing with Acting Director of US Citizenship and Immigration Services Ken Cuccinelli",
 ])
 
 ns = {
