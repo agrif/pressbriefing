@@ -17,6 +17,7 @@ CHEATING = set([
     "Press Briefing with Acting Director of US Citizenship and Immigration Services Ken Cuccinelli",
     "Press Briefing with Acting Commissioner of Customs and Border Protection Mark Morgan",
     "Press Briefing with Secretary Pompeo and Secretary Mnuchin",
+    "Press Briefing with Senator Lindsey Graham",
 ])
 
 ns = {
