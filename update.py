@@ -7,10 +7,15 @@ import datetime
 import os.path
 import os
 import sys
+import re
 
 url = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLRJNAhZxtqH_3Nl-7n1vhgTUHyFSuQ0nI'
 datefmt = '%Y-%m-%dT%H:%M:%S+00:00'
 destroot = "wwwroot"
+
+# what do daily press briefing titles look like?
+# well, they look like <date>: <stuff>
+title_re = re.compile(r'[0-9\\/]+\s*:.+', re.IGNORECASE)
 
 CHEATING = set([
     "Treasury Secretary Mnuchin Briefs Reporters",
@@ -41,6 +46,8 @@ def get_latest():
             'url': entry.find('atom:link', ns).attrib['href'],
         }
         if info['title'] in CHEATING:
+            continue
+        if not title_re.match(info['title']):
             continue
         infos.append(info)
 
