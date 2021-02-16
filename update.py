@@ -12,18 +12,18 @@ import re
 # Trump Administration Playlist
 #url = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLRJNAhZxtqH_3Nl-7n1vhgTUHyFSuQ0nI'
 
-# Biden Administration (whole channel, no playlist yet)
-url = 'https://www.youtube.com/feeds/videos.xml?channel_id=UCYxRlFDqcWM4y7FfpiAN3KQ'
+# Biden Administration Playlist
+url = 'https://www.youtube.com/feeds/videos.xml?playlist_id=PLRJNAhZxtqH9HovoVAK601PgqtL4EIKmH'
 
 datefmt = '%Y-%m-%dT%H:%M:%S+00:00'
 destroot = "wwwroot"
 
 # what do daily press briefing titles look like?
 # well, they look like <date>: <stuff>
-#title_re = re.compile(r'[0-9\\/]+\s*:.+', re.IGNORECASE)
+title_re = re.compile(r'[0-9\\/]+\s*:.+', re.IGNORECASE)
 
 # or <date>: Press Briefing <stuff>
-title_re = re.compile(r'[0-9\\/]+\s*:\s+Press\sBriefing\s+.+', re.IGNORECASE)
+#title_re = re.compile(r'[0-9\\/]+\s*:\s+Press\sBriefing\s+.+', re.IGNORECASE)
 
 CHEATING = set([
     "Treasury Secretary Mnuchin Briefs Reporters",
